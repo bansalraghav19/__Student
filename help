@@ -1,0 +1,4 @@
+1. install yarn https://yarnpkg.com/en/docs/install.
+2. yarn global add create-react-app
+3. create-react-app student
+4. yarn start
