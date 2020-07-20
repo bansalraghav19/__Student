@@ -81,6 +81,7 @@ span{
     border-radius: 100px;
     border: none;
     margin-left: 30%;
+    margin-bottom: 5%;
     display: block;
 }
 
@@ -90,6 +91,10 @@ span{
     margin-top: 1%;
     text-decoration: none;
     color: #00796B;
+}
+
+.register{
+    margin-top: -6%;
 }
 
 *:focus {outline: none;}

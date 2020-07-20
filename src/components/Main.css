@@ -1,0 +1,144 @@
+.main{
+      font-family: 'Lato', 'Arial', sans-serif;
+}
+.header{
+      top: 0px;
+      position: fixed;
+      width:98%;
+      background-color: rgb(255, 255, 255);
+      padding: 1%;
+      border-bottom: 1px solid rgb(233, 233, 233);
+}
+
+.clearfix::after {
+      content: "";
+      display: table;
+      clear: both;
+}
+
+.header-primary,
+.header-secondary{
+      margin-left:2% ;
+}
+
+.header-primary{
+      float: left;
+
+}
+
+.header-secondary{
+      float: left;
+}
+
+.sidebar{
+      position: fixed;
+      left: 0px;
+      top:64px;
+      background-color: white;
+      width: 5%;
+      height: 89vh;
+      border-right:  1px solid rgb(233, 233, 233);
+}
+
+.nav-link{
+      margin-bottom: 20px;
+      display: block;
+      text-decoration: none;
+      text-align: center;
+      font-size: 200%;
+}
+
+.comp{
+      height: 100px;
+      width:94%;
+}
+.comp h1{
+      font-weight: 500;
+      margin-top: 1%;
+      margin-left: 7%;
+}
+
+img{
+      border-top-left-radius: 30px;
+      border-bottom-left-radius: 30px;
+      width:98%;
+      margin-left: 7%;
+      margin-top:7%;
+      height: 50vh;
+}
+
+.test{
+      margin-top: 10%;
+      margin-left: 10%;
+}
+
+.row{
+      margin-top: 3%;
+      margin-left: 10%;
+      width:1140px;
+      height: 30vh;
+      overflow: hidden;
+}
+.col{
+      float: left;
+      margin-right: 5%;
+}
+.subject{
+      background-color: khaki;
+      width: 20%;
+      height:45% ;
+      border-bottom-left-radius: 10px;
+      border-top-left-radius: 10px;
+      text-align: center;
+}
+
+.subject h3{
+      margin-top: 13%;
+      color: white;
+}
+
+#sub0{
+      background-color:#4834d4;
+}
+
+#sub1{
+      background-color:#6ab04c;
+}
+
+#sub2{
+      background-color:#eb4d4b;
+}
+
+#sub3{
+      background-color:#22a6b3;
+}
+
+.row1{
+      margin-top: 0%;
+      margin-left: 5.4%;
+      width: 1199px;
+      height: 60vh;
+      overflow: hidden;
+      background-color: #f2f4f8;
+}
+
+.chapters{
+      width:50000px;
+      height: 100%;
+      margin-left: 4.5%;
+      margin-top: 5%;
+      margin-bottom: 5%;
+}
+
+.col1{
+      overflow: hidden;
+      float: left;
+      margin-right: 0.1%;
+}
+
+.chapter{
+      height: 70%;
+      width:0.6%;
+      /* margin-left: 1%; */
+      background-color: white;
+}
