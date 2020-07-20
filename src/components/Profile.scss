@@ -1,0 +1,200 @@
+$color-primary: #55c57a;
+$color-primary-light: #7ed56f;
+$color-primary-dark: #28b485;
+
+$color-secondary-light: #ffb900;
+$color-secondary-dark: #ff7730;
+
+$color-tertiary-light: #2998ff;
+$color-tertiary-dark: #5643fa;
+
+$color-grey-light-1: #f7f7f7;
+$color-grey-light-2: #eee;
+
+$color-grey-dark: #777;
+$color-grey-dark-2: #999;
+$color-grey-dark-3: #333;
+
+$color-white: #fff;
+$color-black: #000;
+$--blue: #1D41B0;
+$color-orange: #FEA116;
+$color-orange-light: #ffab40;
+$color-red: #D05451;
+
+
+// FONT
+$default-font-size: 1.6rem;
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.container {
+    width: 100%;
+    height: 100%;
+    font-size: 62.5%;
+}
+
+.col {
+    display: inline-block;
+    height: 100%;
+}
+
+.col:first-child {
+    float: left;
+    width: 30%;
+    height: 75vh;
+}
+
+.col:last-child {
+    float: left;
+    width: 70%;
+    height: 100vh;
+}
+
+.card {
+    width: 90%;
+    margin: 5% 5%;
+    box-shadow: 1rem 1.5rem 4rem rgba(0, 0, 0, .15);
+    border-radius: 2%;
+}
+
+.card1 {
+    text-align: center;
+    padding-top: .2rem;
+}
+
+.card2 {
+    height: 50%;
+    // background-color: $color-orange;
+    .price {
+        width: 100%;
+        color: $color-white;
+        border-top-left-radius: 2%;
+        border-top-right-radius: 2%;
+        background-image: linear-gradient(to right, $color-orange-light, $color-orange);
+        height: 30%;
+        margin-bottom: 1rem;
+        font-size: 1rem;
+        // text-transform: uppercase;
+        // text-align: center;
+        padding: 0.7rem 0.6rem;
+        
+    }
+    ._content {
+        background-color: $color-white;
+        padding-left: .3rem;
+        height: 40%;
+        text-align: left;
+        line-height: 1rem;
+        p {
+            margin-bottom: .2rem;
+            text-align: center;
+            color: $color-red;
+        }
+    }
+    .btn {
+        height: 30%;
+        width: 100%;
+        text-align: center;
+    }
+}
+
+.dp {
+    width: 100%;
+    height: 30%;
+}
+
+.dp_img {
+    width: 25%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+.details {
+    margin-top: .8rem;
+    p {
+        margin-top: .5rem;
+        &:last-child {
+            padding-bottom: 1rem;
+        }
+    }
+}
+
+
+.btn1, .btn2{
+    &:link,
+    &:visited {
+        font-size: .8rem;
+        color: $color-primary;
+        display: inline-block;
+        text-decoration: none;
+        border-bottom: 1px solid $color-primary;
+        padding: 3px;
+        transition: all .2s;
+    }
+
+    &:hover {
+        background-color: $color-primary;
+        color: $color-white;
+        box-shadow: 0 1rem 2rem rgba($color-black, .15);
+        transform: translateY(-2px);
+    }
+
+    &:active {
+        box-shadow: 0 .5rem 1rem rgba($color-black, .15);
+        transform: translateY(0);
+    }
+}
+
+.btn2 {
+    &:link,
+    &:visited {
+        color: $color-orange;
+        border-bottom: 1px solid $color-orange;
+    }
+
+    &:hover {
+        background-color: $color-orange;
+        color: $color-white;
+    }
+}
+
+.adjust {
+    float: left;
+}
+
+.title {
+    text-align: left;
+    font-weight: 300;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    // float: left;
+}
+
+.sub-title {
+    text-align: left;
+    font-size: .5rem;
+    // float: left;
+}
+.cost {
+    float: right;
+    margin-top: .5rem;
+    font-size: 1.7rem;
+    font-weight: 300;
+}
+
+.discount, .text {
+    font-size: .6rem;
+}
+
+.discount {
+    margin-right: .25rem;
+    font-size: 1rem;
+    text-decoration: line-through;
+}
