@@ -10,7 +10,10 @@ html {
   font-size: 100%; }
 
 .container {
-  display: flex; }
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  background-color: #eee; }
 
 .col1 {
   flex: 0 0 30%;
@@ -18,8 +21,10 @@ html {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  align-self: flex-start;
   margin: 1% 1% 0 1%; }
   .col1 .card {
+    background-color: #fff;
     border-radius: 3%;
     box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.15);
     transition: box-shadow 0.2s; }
@@ -92,11 +97,13 @@ html {
   flex: 1;
   display: flex;
   flex-direction: column;
-  margin: 1% 1% 0 1%; }
+  margin: 1% 1% 0 1%;
+  align-self: flex-start; }
   .col2 .card {
     box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.15);
     transition: box-shadow 0.2s;
-    border-radius: 3%; }
+    border-radius: 3%;
+    background-color: #fff; }
     .col2 .card:hover {
       box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.3); }
   .col2 .card1 {
@@ -133,14 +140,17 @@ html {
         height: 1rem;
         width: 1rem;
         position: absolute;
-        bottom: 15%;
+        bottom: 10%;
         margin-right: .7rem;
         background-image: url(./SVG/phone.svg);
         background-size: cover; }
       .col2 .card1 .about-info ul li p {
         margin-left: 3%; }
   .col2 .card2 {
-    flex: 1; }
+    flex: 1;
+    padding: 3%; }
+    .col2 .card2 .about-info ul {
+      list-style: none; }
 
 .btn1:link, .btn1:visited, .btn2:link, .btn2:visited {
   font-size: 120%;

@@ -18,8 +18,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "compile:sass": "node-sass D:/react-student/student/src/components/Profile.scss D:/react-student/student/src/components/Profile.css",
-    "watch:sass": "node-sass D:/react-student/student/src/components/Profile.scss D:/react-student/student/src/components/Profile.css -w"
+    "compile:sass": "node-sass D:/__student/src/components/Profile.scss D:/__student/src/components/Profile.css",
+    "watch:sass": "node-sass D:/__student/src/components/Profile.scss D:/__student/src/components/Profile.css -w"
   },
   "eslintConfig": {
     "extends": "react-app"

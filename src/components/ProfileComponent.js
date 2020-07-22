@@ -2,12 +2,16 @@ import React , { Component } from 'react';
 
 import './Profile.css';
 // import './icon-font.css';
+import Navbar from './navbar';
+import Sidebar from './sidebar';
 
 class Profile extends Component{
 
       render(){
             return(
                   <div className="container">
+                        <Navbar />
+                        <Sidebar />
                         <div className="col1">
                               <div className="card card1">
                                     <div className="dp">
@@ -62,7 +66,14 @@ class Profile extends Component{
                                     </div>
                               </div>
                               <div className="card card2">
-                                    B
+                                    <div className="heading">
+                                          <h2>Personal Info</h2>
+                                    </div>
+                                    <div className="about-info">
+                                          <ul>
+
+                                          </ul>
+                                    </div>
                               </div>
                         </div>
                   </div>
