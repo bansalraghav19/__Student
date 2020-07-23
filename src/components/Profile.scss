@@ -38,13 +38,30 @@ html {
     font-size: 100%;
 }
 
-.container {
+
+.wrapper {
     display: flex;
-    flex-wrap: wrap;
-    align-content: flex-start;
+    flex-direction: column;
+    height: 100vh;
+    width: 100%;
+    overflow-y: hidden;
+}
+
+.container {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    // flex-wrap: wrap;
+    // align-content: flex-start;
     background-color: #eee;
 }
 
+
+.content {
+    display: flex;
+    overflow-y: scroll;
+    padding-bottom: 5%;
+}
 .col1 {
     // background-color: yellow;
     flex: 0 0 30%; 
@@ -56,7 +73,7 @@ html {
     margin: 1% 1% 0 1%;
     .card {
         background-color: #fff;
-        border-radius: 3%;
+        border-radius: 30px;
         box-shadow: 2px 2px 4px rgba(0, 0, 0, .15);
         transition: box-shadow 0.2s;
         &:hover {
@@ -77,6 +94,11 @@ html {
         justify-content: center; 
         align-items: center;
         margin-bottom: 5%;
+        img {
+            height: 7rem;
+            width: 7rem;
+            border-radius: 50%;
+        }
     } 
     .card2 { 
         flex: 1;
@@ -144,7 +166,7 @@ html {
 } 
 
 .col2 {
-    // background-color: yellowgreen;
+    // background-color: yellowgreen
     flex: 1;
     display: flex;
     flex-direction: column;
@@ -156,7 +178,7 @@ html {
         &:hover {
             box-shadow: 10px 10px 30px rgba(0, 0, 0, .3);
         }
-        border-radius: 3%;
+        border-radius: 30px;
         background-color: #fff;
     }
     .card1 {

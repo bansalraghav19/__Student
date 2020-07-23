@@ -11,6 +11,7 @@ class Navbar extends Component {
             <div className="navbar">
                 <div className="app-description">
                     <div className="app-logo"><img  src='./assets/logo.png'/></div>
+                    <div className="sep">|</div>
                     <div className="page-name">PROFILE PAGE</div>
                 </div>
                 <div className="buttons">

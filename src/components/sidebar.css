@@ -1,5 +1,36 @@
 .sidebar {
-    width: 3%;
+    flex: 0 0 4%;
     background-color: #c69963;
     opacity: 0.8;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.sidebar div {
+    height: 8%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btt1 {
+    text-decoration: none;
+}
+
+.wrap img{
+    transition: all .2s;
+}
+
+.wrap:hover img {
+    transform: scale(1.2);
+}
+
+.wrap {
+    transition: all .2s;
+}
+.wrap:hover {
+    background-color: #fff;
 }
