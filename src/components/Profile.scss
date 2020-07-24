@@ -21,7 +21,7 @@ $--blue: #1D41B0;
 $color-orange: #FEA116;
 $color-orange-light: #ffab40;
 $color-red: #D05451;
-
+$bp-small: 600px;
 
 // FONT
 
@@ -48,6 +48,9 @@ html {
 }
 
 .container {
+    @media only screen and (max-width: $bp-small) {
+        flex-direction: column;
+    }
     height: 100%;
     width: 100%;
     display: flex;

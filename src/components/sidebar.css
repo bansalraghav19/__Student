@@ -8,6 +8,10 @@
     justify-content: flex-start;
 }
 
+@media only screen and (max-width: 600px) {
+    .sidebar {
+      flex-direction: row; } }
+
 .sidebar div {
     height: 8%;
     width: 100%;

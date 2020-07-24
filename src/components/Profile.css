@@ -21,6 +21,9 @@ html {
   width: 100%;
   display: flex;
   background-color: #eee; }
+  @media only screen and (max-width: 600px) {
+    .container {
+      flex-direction: column; } }
 
 .content {
   display: flex;

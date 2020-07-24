@@ -6,15 +6,16 @@ import { BrowserRouter } from 'react-router-dom';
 import Profile from './components/ProfileComponent';
 // import Main from "./components/MainComponent";
 // import Profile from "./components/ProfileComponent";
+import Func from './components/FunctionalComponent'
+import ClassC from './components/ClassComponent';
 
 function App() {
   return (
-    <BrowserRouter>
+    // <BrowserRouter>
     <div className="App">
-      {/* <Login/> */}
       <Profile />
     </div>
-    </BrowserRouter>
+    // </BrowserRouter>
   );
 }
 
