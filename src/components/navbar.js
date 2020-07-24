@@ -9,17 +9,19 @@ class Navbar extends Component {
     render() {
         return (
             <div className="navbar">
-                <div className="app-description">
-                    <div className="app-logo"><img  src='./assets/logo.png'/></div>
-                    <div className="sep">|</div>
-                    <div className="page-name">PROFILE PAGE</div>
-                </div>
-                <div className="buttons">
-                    <div>
-                        <a class="b1" href="#">Sign In</a>
+                <div className="HeadPart">
+                    <div className="app-description">
+                        <div className="app-logo"><img  src='./assets/logo.png'/></div>
+                        <div className="sep">|</div>
+                        <div className="page-name">PROFILE PAGE</div>
                     </div>
-                    <div>
-                        <a class="b1" href="#">Sign Up</a>
+                    <div className="buttons">
+                        <div>
+                            <a class="b1" href="#">Sign In</a>
+                        </div>
+                        <div>
+                            <a class="b1" href="#">Sign Up</a>
+                        </div>
                     </div>
                 </div>
             </div>
