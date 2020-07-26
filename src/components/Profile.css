@@ -16,7 +16,9 @@ html {
   height: 100vh;
   width: 100%;
   overflow-y: hidden; }
-
+.shift {
+  margin-right: 1%;
+}
 .container {
   height: 100%;
   width: 100%;
@@ -48,6 +50,7 @@ html {
     .col1 .card:hover {
       box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.3); }
     .col1 .card .details {
+      position: relative;
       text-align: center; }
       .col1 .card .details p {
         margin: 5% 0; }
@@ -63,6 +66,13 @@ html {
       height: 7rem;
       width: 7rem;
       border-radius: 50%; }
+      .col1 .card1 img:hover {
+        opacity: 0.5;
+        cursor: pointer;
+       }
+    .col1 .card1 .fileu {
+      display: none;
+    }
   .col1 .card2 {
     flex: 1;
     display: flex;

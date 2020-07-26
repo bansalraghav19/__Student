@@ -1,4 +1,14 @@
 import React , { Component } from 'react';
+import Button from '@material-ui/core/Button';
+import Dialog from '@material-ui/core/Dialog';
+import DialogActions from '@material-ui/core/DialogActions';
+import DialogContent from '@material-ui/core/DialogContent';
+import DialogContentText from '@material-ui/core/DialogContentText';
+import { withStyles } from '@material-ui/core/styles';
+import DialogTitle from '@material-ui/core/DialogTitle';
+import FormLabel from '@material-ui/core/FormLabel';
+import FormControl from '@material-ui/core/FormControl';
+import TextField from '@material-ui/core/TextField';
 
 import './Profile.css';
 // import './icon-font.css';
@@ -6,17 +16,42 @@ import Navbar from './navbar';
 import Sidebar from './sidebar';
 import Form from './Form';
 
+
+const useStyles = theme => ({
+      formControl: {
+            minWidth: '100%',
+            marginBottom: '2%'
+      }, 
+})
+
 class Profile extends Component{
 
       constructor(props) {
             super(props)
       
             this.state = {
-                  rawData: {}
+                  rawData: {}, 
+                  open: false
             }
             this.uploadFile = this.uploadFile.bind(this)
+            this.handleClickOpen = this.handleClickOpen.bind(this)
+            this.handleClose = this.handleClose.bind(this)
       }
       
+      handleClickOpen(){
+            console.log('hello')
+            this.setState({
+                  open: true
+            })
+            // console.log(this.state.open)
+      };
+
+      handleClose() {
+            this.setState({
+                  open: false
+            })
+      }
+
       uploadFile(event) {
             var myHeaders = new Headers();
             myHeaders.append("authorization", "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZjAxZjJkM2E3NTM4YzJkN2FlNDQ0ZWMiLCJpYXQiOjE1OTQwNjAwNjV9.9-D9sxfYjvrxzibd-_rfZ-XAVrrZF2IWNg8bnhVl5eg");
@@ -74,6 +109,7 @@ class Profile extends Component{
       }
 
       render(){
+            const { classes } = this.props
             return(
                   <div className="wrapper">
                         <Navbar />
@@ -83,14 +119,60 @@ class Profile extends Component{
 
                                     <div className="col1">
                                           <div className="card card1">
-                                                <div className="dp">
+                                                <label className="dp">
+                                                      <input type="file"  className="fileu" onChange={this.uploadFile} id="myFile" name="filename"/>
                                                       <img className="dp_img" src={this.state.rawData.profilePic}></img>
-                                                </div>
-                                                <input type="file"  onChange={this.uploadFile} id="myFile" name="filename"/>
+                                                </label>
                                                 <div className="details">
                                                       <p>{this.state.rawData.userName}</p>
                                                       <p>{this.state.rawData.class}th Grade &diams; {this.state.rawData.board}</p>
-                                                      <p><a className = "btn btn1" href="#">Change Password</a></p>
+                                                      <p><a className = "btn btn1" href="#" onClick={this.handleClickOpen}>Change Password</a></p>
+                                                      <Dialog
+                                                            open={this.state.open}
+                                                            onClose={this.handleClose}
+                                                            aria-labelledby="alert-dialog-title"
+                                                            aria-describedby="alert-dialog-description"
+                                                      >
+                                                            <DialogTitle id="alert-dialog-title">Change Password</DialogTitle>
+                                                            <DialogContent>
+                                                                  <DialogContentText id="alert-dialog-description">
+                                                                        <form>
+                                                                              <FormControl className={classes.formControl}>
+                                                                                    <FormLabel>Current Password</FormLabel>
+                                                                                    <TextField ref='password'
+                                                                                          hintText="Password"
+                                                                                          floatingLabelText="Password"
+                                                                                          type="password">
+                                                                                    </TextField>
+                                                                              </FormControl>
+                                                                              <FormControl className={classes.formControl}>
+                                                                                    <FormLabel>New Password</FormLabel>
+                                                                                    <TextField ref='password'
+                                                                                          hintText="Password"
+                                                                                          floatingLabelText="Password"
+                                                                                          type="password">
+                                                                                    </TextField>
+                                                                              </FormControl>
+                                                                              <FormControl className={classes.formControl}>
+                                                                                    <FormLabel>Confirm Password</FormLabel>
+                                                                                    <TextField ref='password'
+                                                                                          hintText="Password"
+                                                                                          floatingLabelText="Password"
+                                                                                          type="password">
+                                                                                    </TextField>
+                                                                              </FormControl>
+                                                                        </form>
+                                                                  </DialogContentText>
+                                                            </DialogContent>
+                                                            <DialogActions>
+                                                                  <Button onClick={this.handleClose} color="primary">
+                                                                        Close
+                                                                  </Button>
+                                                                  <Button onClick={this.handleClose} color="primary" autoFocus>
+                                                                        Change Password
+                                                                  </Button>
+                                                            </DialogActions>
+                                                      </Dialog>
                                                 </div>
                                           </div>
                                           <div className="card card2">
@@ -153,4 +235,4 @@ class Profile extends Component{
       };
 }
 
-export default Profile;
+export default withStyles(useStyles)(Profile)
