@@ -1,0 +1,6 @@
+
+.btncls {
+    display: flex;
+    margin: 1% 0 2% 0;
+    justify-content: flex-end;
+}

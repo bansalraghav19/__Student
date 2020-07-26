@@ -63,6 +63,7 @@ html {
 .content {
     display: flex;
     overflow-y: scroll;
+    scrollbar-width: none;
     padding-bottom: 5%;
 }
 .col1 {

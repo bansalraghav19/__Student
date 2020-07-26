@@ -86,13 +86,13 @@ class Profile extends Component{
                                                 <div className="dp">
                                                       <img className="dp_img" src={this.state.rawData.profilePic}></img>
                                                 </div>
+                                                <input type="file"  onChange={this.uploadFile} id="myFile" name="filename"/>
                                                 <div className="details">
                                                       <p>{this.state.rawData.userName}</p>
                                                       <p>{this.state.rawData.class}th Grade &diams; {this.state.rawData.board}</p>
                                                       <p><a className = "btn btn1" href="#">Change Password</a></p>
                                                 </div>
                                           </div>
-                                          <input type="file"  onChange={this.uploadFile} id="myFile" name="filename"/>
                                           <div className="card card2">
                                                 <div className="price-header">
                                                       <div className="adjust">
